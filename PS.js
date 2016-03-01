@@ -21,7 +21,7 @@ function randomInteger(min, max) {
     rand = Math.round(rand);
     return rand;
 }
-
+/*
 function doClick() {
 	var energyProgress = getEnergyProgress();
 	if (energyProgress > 10) {
@@ -34,3 +34,4 @@ function doClick() {
 		}
 	}())
 }
+*/
