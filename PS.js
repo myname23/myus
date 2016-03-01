@@ -28,8 +28,9 @@ function randomInteger(min, max) {
  function clicker(clickArea, energyPull, percentage, minTime, maxTime) {
 	 var numOfClicks = getClicksNum(percentage, energyPull);
 	 if (numOfClicks > 1) {
-		 clickArea.click();
-		if(--numOfClicks) setTimeout(clicker, randomInteger(minTime, maxTime));
-	 }
-	 
+		 function clickOk() {
+			clickArea.click();
+			if(--numOfClicks) setTimeout(clickOk, randomInteger(minTime, maxTime));
+		}
+	 }	 
  }
