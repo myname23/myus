@@ -14,24 +14,22 @@ function getClicksNum(percentage, energyPull) {
 }
 
 /*
- * Генерация рандомного целого числа
+ * Генерация рандомного целого числа в заданном диапазоне
  */
 function randomInteger(min, max) {
     var rand = min - 0.5 + Math.random() * (max - min + 1)
     rand = Math.round(rand);
     return rand;
 }
+
 /*
-function doClick() {
-	var energyProgress = getEnergyProgress();
-	if (energyProgress > 10) {
-		var clickArea = document.getElementById('backyardMineAnim'),
-		numOfClicks = getClicksNum(100, energyProgress);
-		
-		(function clicker() {
-			clickArea.click();
-			if(--numOfClicks) setTimeout(clicker, randomInteger(300, 1000))
-		}
-	}())
-}
-*/
+ * Кликер
+ */ 
+ function clicker(clickArea, energyPull, percentage, minTime, maxTime) {
+	 var numOfClicks = getClicksNum(percentage, energyPull);
+	 if (numOfClicks > 1) {
+		 clickArea.click();
+		if(--numOfClicks) setTimeout(clicker, randomInteger(minTime, maxTime));
+	 }
+	 
+ }
