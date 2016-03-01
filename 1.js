@@ -1,1 +1,1 @@
-setInterval(alert(18), 3*1000);
+setInterval('alert("прошла секунда")', 1000)
