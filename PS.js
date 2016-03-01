@@ -27,9 +27,11 @@ function randomInteger(min, max) {
  */ 
  function clicker(energyPull, percentage, minTime, maxTime) {
 	 
-	 var clickArea = document.getElementById('backyardMineAnim'), numOfClicks = getClicksNum(percentage, energyPull);
-	 if (numOfClicks > 1) {
-		 function clickOk() {
+	var clickArea, numOfClicks;
+	clickArea = document.getElementById('backyardMineAnim');
+	numOfClicks = getClicksNum(percentage, energyPull);
+	if (numOfClicks > 1) {
+		function clickOk() {
 			clickArea.click();
 			if(--numOfClicks) setTimeout(clickOk, randomInteger(minTime, maxTime));
 		}
