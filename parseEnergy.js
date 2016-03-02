@@ -1,8 +1,6 @@
-var fants = document.getElementById('petMoneyValue').getElementsByClassName('val')[0].innerHTML;
-
-functiont getEn() {
+function getEn() {
   var energy = document.getElementById('backyardEnergyProgress').getElementsByClassName('current')[0].innerHTML;
-  fants = energy;
+  document.getElementById('petMoneyValue').getElementsByClassName('val')[0].innerHTML = energy;
  }
 
 setInterval(getEn, 10000);
