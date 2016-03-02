@@ -1,3 +1,5 @@
-var en = document.getElementById('backyardEnergyProgress').getElementsByClassName('current')[0].innerHTML;
+functiont getEn() {
+  alert(document.getElementById('backyardEnergyProgress').getElementsByClassName('current')[0].innerHTML);
+}
 
-setInterval('alert(en)', 10000);
+setInterval('getEn', 10000);
